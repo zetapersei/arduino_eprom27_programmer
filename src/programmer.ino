@@ -136,10 +136,10 @@ void loop() {
         break;
       }
       message("Write mode");
-      /*for (int i = start_address; i <= end_address; i++) {
+      for (int i = start_address; i <= end_address; i++) {
         Serial.println(i, HEX);
         write_byte(i, 0x89);
-        }*/
+        }
       for (uint16_t i = start_address; i <= end_address; i += BUF_LEN) {
         Serial.print("Write block ");
         Serial.println(i);
